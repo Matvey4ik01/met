@@ -1,134 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>попа</title>
+    <title>Рецепт Метамфетамина</title>
     <style>
+      /* Общие стили */
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(rgb(85, 179, 223), rgb(37, 122, 161));
+      }
+
+      /* Шапка */
+      header {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .logo {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+        margin: 0;
+        flex: 1;
+        text-align: center;
+        padding-left: 11rem;
+      }
+
+      /* Навигация */
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        transition: all 0.2s ease;
+        display: inline-block;
+      }
+
+      nav li a:hover {
+        color: aqua;
+        transform: scale(1.1);
+      }
+
+      /* Основной контент */
+      main {
+        flex: 1;
+        padding: 1.3rem;
+        display: flex;
+        justify-content: center;
+      }
+
       .my-div {
         background-color: black;
         color: white;
-        padding: 1rem 1.3rem;
-        margin: 3rem 3rem;
-        border: 0.2rem solid red;
+        padding: 1.5rem;
+        margin: 2rem;
+        border: 0.2rem solid rgb(255, 255, 255);
         border-radius: 1.5rem;
         max-width: 90%;
         min-height: 200px;
         overflow: auto;
+      }
 
-        p,
-        li {
-          line-height: 1.5; /* Было 1 */
-          word-wrap: break-word;
-        }
-        h1 {
-          font-size: 2rem;
-        }
-        h2 {
-          font-size: 1.75rem;
-          padding-top: 2rem;
-        }
-        h3 {
-          font-size: 1.25rem;
-          padding-top: 2rem;
-        }
-        p {
-          font-size: 1rem;
-        }
-        @media (max-width: 768px) {
-          .my-div {
-            width: 90%;
-            border-radius: 0;
-            padding: 10px;
-          }
-        }
-        html {
-          font-family: Arial, Helvetica, sans-serif;
-        }
-        header {
-          background-color: black;
-          color: white;
+      .my-div h1 {
+        font-size: 2rem;
+        margin-top: 0;
+      }
 
-          justify-content: space-between;
-          margin: 0;
-          display: flex;
-          height: auto;
+      .my-div h2 {
+        font-size: 1.75rem;
+        padding-top: 2rem;
+      }
+
+      .my-div h3 {
+        font-size: 1.25rem;
+        padding-top: 1.5rem;
+      }
+
+      .my-div p,
+      .my-div li {
+        line-height: 1.5;
+        word-wrap: break-word;
+      }
+
+      /* Подвал */
+      footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      /* Адаптивность */
+      @media (max-width: 768px) {
+        .my-div {
+          margin: 1rem;
           padding: 1rem;
-          flex-wrap: wrap;
-          gap: 1rem;
-          align-items: center;
+          border-radius: 0.5rem;
         }
-        header .logo {
-          width: 5rem;
-          height: 5rem;
-        }
-        header ul {
-          list-style: none;
-          display: flex;
-          padding: 0;
-          margin: 0;
-        }
-        header li {
-          margin-left: 1rem;
-        }
-        body {
-          min-height: 100vh;
-          display: flex;
+
+        header {
           flex-direction: column;
-          margin: 0;
-          padding: 0;
-          background: linear-gradient(rgb(85, 179, 223), rgb(37, 122, 161));
-        }
-        nav li a {
-          text-decoration: none;
-          color: white;
-          font-size: 1.2rem;
-          transition: transform 0.2s ease;
-          display: inline-block;
-        }
-
-        nav li a:hover {
-          color: aqua;
-          transform: scale(1.1);
-        }
-        header h1 {
-          padding-left: 11rem;
-
           text-align: center;
         }
-        main {
-          flex: 1;
-          padding: 1.3rem;
+
+        nav ul {
+          flex-wrap: wrap;
           justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        html {
+          font-size: 14px;
+        }
+
+        .logo {
+          width: 4rem;
+          height: 4rem;
+        }
+
+        .my-div {
+          margin: 0.5rem;
+          padding: 0.8rem;
+        }
+
+        nav ul {
+          flex-direction: column;
           align-items: center;
-        }
-        footer {
-          background-color: black;
-          color: white;
-          height: 5rem;
-          text-align: center;
-          padding: 1rem 2rem;
-        }
-        @media (max-width: 480px) {
-          html {
-            font-size: 14px;
-          }
-          .my-div {
-            width: 90%;
-            border-radius: 0;
-            padding: 10px;
-          }
-          header {
-            margin: 0;
-          }
-          footer {
-            margin: 0;
-          }
-        }
-        @media (max-width: 768px) {
-          main {
-            padding: 0.5rem; /* Уменьшенные отступы */
-          }
         }
       }
     </style>
@@ -136,20 +160,19 @@
   <body>
     <header>
       <img src="bobr.jpg" alt="бобр" class="logo" />
-      <h1>сайтик</h1>
+      <h1>Рецепт Метамфетамина</h1>
       <nav class="navbar">
         <ul>
-          <li><a href="#">первый</a></li>
-          <li><a href="#">второй</a></li>
-          <li><a href="#">третий</a></li>
-          <li><a href="#">четвертый</a></li>
+          <li><a href="#nav1">Ингредиенты</a></li>
+          <li><a href="#nav2">Оборудование</a></li>
+          <li><a href="#nav3">Шаги приготовления</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <div class="my-div">
         <h1>Как варить Метамфетамин</h1>
-        <h2>Ингредиенты и пропорции:</h2>
+        <h2 id="nav1">Ингредиенты и пропорции:</h2>
         <ul>
           <li>
             Эфедрин (чистый): 100 г (если из таблеток, потребуется около 200-300
@@ -169,7 +192,7 @@
             соли (например, генератор HCl из серной кислоты и поваренной соли).
           </li>
         </ul>
-        <h2>Необходимое оборудование</h2>
+        <h2 id="nav2">Необходимое оборудование</h2>
         <ul>
           <li>
             Стеклянная колба с обратным холодильником (для рефлюкса, объем 1 л).
@@ -184,7 +207,7 @@
             (обязательно!).
           </li>
         </ul>
-        <h2>Шаги приготовления:</h2>
+        <h2 id="nav3">Шаги приготовления:</h2>
         <h3>
           Шаг 1: Извлечение эфедрина из таблеток (если используется не чистый
           эфедрин)
@@ -343,6 +366,7 @@
     </footer>
   </body>
 </html>
+
 
    
   
