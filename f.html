@@ -14,7 +14,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative; /* Для позиционирования кнопки */
+        position: relative;
       }
 
       /* Контейнер с текстом */
@@ -26,7 +26,6 @@
         text-align: center;
       }
 
-      /* Кнопка "назад" */
       .my-button {
         background-color: black;
         color: white;
@@ -34,13 +33,15 @@
         padding: 1rem;
         border: 2px solid rgb(255, 255, 255);
         border-radius: 1rem;
-        position: absolute; /* Абсолютное позиционирование */
-        top: 1rem; /* Отступ сверху */
-        left: 1rem; /* Отступ слева */
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        transition: transform 0.3s ease;
       }
 
       .my-button:hover {
-        background-color: #333; /* Эффект при наведении */
+        background-color: #333;
+        transform: scale(1.1);
       }
     </style>
   </head>
